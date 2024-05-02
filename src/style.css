@@ -1,10 +1,17 @@
 :root {
-  --main-bg-color  : #d1cdb7;
+  --main-bg-color  : #fdfdfd;
+  --bg-grid-color  : #f8f8f8;
+  --bg-grid-2-color: rgba(204, 200, 177, 0);
+  --text-primary   : #5d5d5d;
+  --text-secondary : #f2f2f2;
+  --text-shadow    : #dedede;
+
+  /* --main-bg-color  : #d1cdb7;
   --bg-grid-color  : #ccc8b1;
   --bg-grid-2-color: rgba(204, 200, 177, 0);
   --text-primary   : #454138;
   --text-secondary : #dcd8c0;
-  --text-shadow    : #bab5a1;
+  --text-shadow    : #bab5a1; */
 }
 
 body {
