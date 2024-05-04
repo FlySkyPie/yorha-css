@@ -1,17 +1,17 @@
 :root {
-  --main-bg-color  : #fdfdfd;
+  /* --main-bg-color  : #fdfdfd;
   --bg-grid-color  : #f8f8f8;
   --bg-grid-2-color: rgba(204, 200, 177, 0);
   --text-primary   : #5d5d5d;
   --text-secondary : #f2f2f2;
-  --text-shadow    : #dedede;
+  --text-shadow    : #dedede; */
 
-  /* --main-bg-color  : #d1cdb7;
+  --main-bg-color  : #d1cdb7;
   --bg-grid-color  : #ccc8b1;
   --bg-grid-2-color: rgba(204, 200, 177, 0);
   --text-primary   : #454138;
   --text-secondary : #dcd8c0;
-  --text-shadow    : #bab5a1; */
+  --text-shadow    : #bab5a1;
 }
 
 body {
@@ -224,6 +224,7 @@ input[type=date],
 input[type=month],
 input[type=week],
 input[type=datetime],
+input[type=time],
 input[type=datetime-local] {
   padding           : 0.5rem;
   font-size         : 1em;
@@ -238,6 +239,89 @@ input[type=datetime-local] {
   font-family       : inherit;
   letter-spacing    : inherit;
   font-weight       : inherit;
+}
+
+input[type=checkbox] {
+  display: none;
+}
+
+input[type=checkbox]+span {
+  display     : inline-block;
+  padding-left: 26px;
+  line-height : 20px;
+  user-select : none;
+
+  cursor: pointer;
+
+  position: relative;
+
+  &::before {
+    content : '';
+    position: absolute;
+    width   : 0.8rem;
+    height  : 0.8rem;
+
+    /* background-color: var(--text-shadow); */
+    border      : solid var(--text-shadow);
+    border-width: 0.15rem;
+
+    margin-left: -1.2rem;
+    top        : 0.25em;
+
+  }
+}
+
+input[type=checkbox]:checked+span {
+  &::before {
+    content         : '';
+    position        : absolute;
+    width           : 0.8rem;
+    height          : 0.8rem;
+    background-color: var(--text-primary);
+    margin-left     : -1.2rem;
+    top             : 0.25em;
+
+  }
+}
+
+input[type=radio] {
+  display: none;
+}
+
+input[type=radio]+span {
+  display     : inline-block;
+  padding-left: 26px;
+  line-height : 20px;
+  user-select : none;
+
+  cursor: pointer;
+
+  position: relative;
+
+  &::before {
+    content : '';
+    position: absolute;
+    width   : 0.8rem;
+    height  : 0.8rem;
+
+    background-color: var(--text-shadow);
+    margin-left     : -1.2rem;
+    top             : 0.25em;
+
+  }
+}
+
+input[type=radio]:checked+span {
+  &::before {
+    content         : '';
+    position        : absolute;
+    width           : 0.8rem;
+    height          : 0.8rem;
+    background-color: var(--text-primary);
+    margin-left     : -1.2rem;
+    top             : 0.25em;
+
+  }
 }
 
 select {
