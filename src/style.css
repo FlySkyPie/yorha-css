@@ -324,6 +324,80 @@ input[type=radio]:checked+span {
   }
 }
 
+/* 
+ * Credit: https://codepen.io/stoumann/pen/yLbYOdz
+ */
+input[type=range] {
+  --dir     : right;
+  --mask-1  : url('data:image/svg+xml,<svg width="8" height="24" version="1.1" viewBox="0 0 8 24" xmlns="http://www.w3.org/2000/svg"> <path d="m6 22h-4v-20h4z" stroke-width="1.0178"/></svg>');
+  --mask-2  : url('data:image/svg+xml,<svg width="8" height="24" version="1.1" viewBox="0 0 8 24" xmlns="http://www.w3.org/2000/svg"> <path d="m6 14h-4v-4h4z" stroke-width=".45517"/></svg>');
+  --scales   : 24;
+  --scale-size: 1rem;
+  --value   : 1;
+  --w       : calc(var(--scales) * var(--scale-size));
+  --x       : calc(100% * (var(--value) / var(--scales)));
+
+  height            : 2rem;
+  inline-size       : var(--w);
+  position          : relative;
+  touch-action      : manipulation;
+  -webkit-appearance: none;
+
+  background: transparent;
+
+  &::-moz-range-track {
+    background: linear-gradient(to var(--dir),
+        var(--text-primary) 0 var(--x),
+        var(--text-primary) 0 var(--x));
+    height: 1.6rem;
+    mask  : repeat left center/var(--scale-size) var(--mask-2);
+
+    background: var(--text-primary);
+  }
+
+  &::-moz-range-thumb {
+    height : var(--scale-size);
+    opacity: 0;
+    width  : var(--scale-size);
+  }
+
+  &::-moz-range-progress {
+    background: var(--text-primary);
+    height    : 1.6rem;
+    mask      : repeat left center/var(--scale-size) var(--mask-1);
+  }
+}
+
+[type=range]::-webkit-slider-runnable-track {
+  background: linear-gradient(to var(--dir),
+      var(--text-primary) 0 var(--x),
+      var(--text-shadow) 0 var(--x));
+  height      : 1.6rem;
+  mask        : repeat left center/var(--scale-size) var(--mask-1);
+  -webkit-mask: repeat left center/var(--scale-size) var(--mask-1);
+}
+
+[type=range]::-webkit-slider-thumb {
+  height            : var(--scale-size);
+  opacity           : 0;
+  width             : var(--scale-size);
+
+  background-color: var(--text-primary);
+  box-shadow      : calc(0rem - var(--w)) 0 0 var(--w) var(--text-primary);
+  opacity         : 1;
+  width           : 1px;
+}
+
+[type=range]::-webkit-slider-runnable-track {
+  background: var(--text-shadow);
+  height      : 1.6rem;
+}
+
+[type=range],
+[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
 select {
   background        : url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDIwLjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IgoJIHZpZXdCb3g9IjAgMCA0LjkgMTAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQuOSAxMDsiIHhtbDpzcGFjZT0icHJlc2VydmUiPgo8c3R5bGUgdHlwZT0idGV4dC9jc3MiPgoJLnN0MHtmaWxsOiM0NDQ0NDQ7fQo8L3N0eWxlPgo8dGl0bGU+YXJyb3dzPC90aXRsZT4KPHBvbHlnb24gY2xhc3M9InN0MCIgcG9pbnRzPSIxLjQsNC43IDIuNSwzLjIgMy41LDQuNyAiLz4KPHBvbHlnb24gY2xhc3M9InN0MCIgcG9pbnRzPSIzLjUsNS4zIDIuNSw2LjggMS40LDUuMyAiLz4KPC9zdmc+Cg==") no-repeat right;
   padding           : 0.5rem;
