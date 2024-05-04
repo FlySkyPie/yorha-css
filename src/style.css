@@ -107,6 +107,53 @@ blockquote:before {
   border-width: 0 0.2rem 0 0.6rem;
 }
 
+nav {
+  position    : relative;
+  padding     : 1.0rem;
+  padding-left: 2.0rem;
+
+  display            : flex;
+  flex-direction     : row;
+  /* 
+  margin-block-start : 1em;
+  margin-block-end   : 1em;
+  margin-inline-start: 40px;
+  margin-inline-end  : 40px;
+  unicode-bidi       : isolate; */
+
+  background-color: var(--text-secondary);
+
+  border      : solid var(--text-shadow);
+  border-width: 0 0.2rem 0.2rem 0;
+
+  gap: 1.0rem;
+}
+
+nav>*:nth-child(1) {
+  flex-grow: 1;
+}
+
+nav:before {
+  content     : '';
+  position    : absolute;
+  top         : 0;
+  left        : 0;
+  bottom      : 0;
+  height      : 100%;
+  width       : 0.3rem;
+  border      : solid var(--text-primary);
+  border-width: 0 0.2rem 0 0.6rem;
+}
+
+kbd {
+  padding         : 2px 4px;
+  font-size       : 90%;
+  color           : var(--text-secondary);
+  background-color: var(--text-primary);
+  border-radius   : 0.2rem;
+  box-shadow      : inset 0 -1px 0 rgba(0, 0, 0, .25);
+}
+
 cite {
   position    : relative;
   padding-left: 2rem;
