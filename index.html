@@ -108,6 +108,141 @@
         <button class="full" type="submit">Submit</button>
       </fieldset>
     </form>
+    <fieldset>
+      <legend>Buttons</legend>
+      <div>
+        <div>
+          <div class="buttons">
+            <a href="#!" class="button">Default</a>
+            <a href="#!" class="button primary">Primary</a>
+            <a href="#!" class="button secondary">Secondary</a>
+            <a href="#!" class="button dark">Dark</a>
+            <a href="#!" class="button error">Error</a>
+            <a href="#!" class="button success">Success</a>
+            <a href="#!" class="button outline">Outline</a>
+            <a href="#!" class="button outline primary">Primary outline</a>
+            <a href="#!" class="button outline secondary">Secondary outline</a>
+            <a href="#!" class="button outline dark">Dark outline</a>
+            <a href="#!" class="button clear">Clear</a>
+            <button type="button" class="button primary icon">
+              New file
+              <img
+                src="https://icongr.am/feather/file.svg?size=16&amp;color=ffffff"
+                alt="icon"
+              />
+            </button>
+            <button class="button icon-only">
+              <img src="https://icongr.am/feather/search.svg?size=24" />
+            </button>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+    <form>
+      <fieldset>
+        <legend>A compact inline form</legend>
+        <input type="email" placeholder="Email" />
+        <input type="password" placeholder="Password" />
+        <label for="default-remember">
+          <input type="checkbox" id="default-remember" /> Remember me
+        </label>
+        <button type="submit">Sign in</button>
+      </fieldset>
+    </form>
+    <form>
+      <fieldset>
+        <legend>A Stacked Form</legend>
+        <p>
+          <label for="stacked-email">Email</label>
+
+          <input
+            class="full"
+            type="email"
+            id="stacked-email"
+            placeholder="Email"
+          />
+          <span class="pure-form-message">This is a required field.</span>
+        </p>
+        <p></p>
+
+        <p>
+          <label for="stacked-password">Password</label>
+          <input
+            class="full"
+            type="password"
+            id="stacked-password"
+            placeholder="Password"
+          />
+        </p>
+        <p>
+          <label for="stacked-state">State</label>
+          <select class="full" id="stacked-state">
+            <option>AL</option>
+            <option>CA</option>
+            <option>IL</option>
+          </select>
+        </p>
+        <p>
+          <label for="stacked-remember" class="pure-checkbox">
+            <input type="checkbox" id="stacked-remember" /> Remember me
+          </label>
+        </p>
+        <p>
+          <button type="submit" class="pure-button pure-button-primary">
+            Sign in
+          </button>
+        </p>
+      </fieldset>
+    </form>
+
+    <fieldset>
+      <legend>Checkbox</legend>
+      <form>
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
+        <label for="vehicle1"> I have a bike</label><br />
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" />
+        <label for="vehicle2"> I have a car</label><br />
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat" />
+        <label for="vehicle3"> I have a boat</label>
+      </form>
+    </fieldset>
+    <fieldset>
+      <legend>Color</legend>
+      <input type="color" id="favcolor" name="favcolor" value="#ff0000" />
+    </fieldset>
+    <fieldset>
+      <legend>Date</legend>
+      <input type="date" id="birthday" name="birthday" />
+    </fieldset>
+
+    <fieldset>
+      <legend>Datetime</legend>
+      <input type="datetime-local" id="birthdaytime" name="birthdaytime" />
+    </fieldset>
+
+    <fieldset>
+      <legend>Time</legend>
+      <input type="time" id="appt" name="appt" />
+    </fieldset>
+
+    <fieldset>
+      <legend>File</legend>
+      <form>
+        <label for="myfile">Select a file:</label>
+        <input type="file" id="myfile" name="myfile" />
+      </form>
+    </fieldset>
+
+    <fieldset>
+      <legend>Number</legend>
+      <input type="number" id="quantity" name="quantity" min="1" max="5" />
+    </fieldset>
+
+    <fieldset>
+      <legend>Range</legend>
+      <input type="range" id="vol" name="vol" min="0" max="50" />
+    </fieldset>
+
     <h2>Blockquotes</h2>
     <blockquote>
       Nier: Automata (Japanese: ニーア オートマタ Hepburn: Nīa Ōtomata, stylized
@@ -131,7 +266,8 @@
       @ A B C D E F G H I J K L M N O
       P Q R S T U V W X Y Z [ \ ] ^ _
       ` a b c d e f g h i j k l m n o
-      p q r s t u v w x y z { | } ~</pre>
+      p q r s t u v w x y z { | } ~</pre
+    >
     <h2>Tables</h2>
     <table>
       <thead>
