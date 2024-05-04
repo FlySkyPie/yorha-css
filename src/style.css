@@ -1,10 +1,10 @@
 :root {
-  /* --main-bg-color  : #fdfdfd;
+  --main-bg-color  : #fdfdfd;
   --bg-grid-color  : #f8f8f8;
   --bg-grid-2-color: rgba(204, 200, 177, 0);
   --text-primary   : #5d5d5d;
   --text-secondary : #f2f2f2;
-  --text-shadow    : #dedede; */
+  --text-shadow    : #dedede;
 
   --main-bg-color  : #d1cdb7;
   --bg-grid-color  : #ccc8b1;
@@ -328,14 +328,14 @@ input[type=radio]:checked+span {
  * Credit: https://codepen.io/stoumann/pen/yLbYOdz
  */
 input[type=range] {
-  --dir     : right;
-  --mask-1  : url('data:image/svg+xml,<svg width="8" height="24" version="1.1" viewBox="0 0 8 24" xmlns="http://www.w3.org/2000/svg"> <path d="m6 22h-4v-20h4z" stroke-width="1.0178"/></svg>');
-  --mask-2  : url('data:image/svg+xml,<svg width="8" height="24" version="1.1" viewBox="0 0 8 24" xmlns="http://www.w3.org/2000/svg"> <path d="m6 14h-4v-4h4z" stroke-width=".45517"/></svg>');
-  --scales   : 24;
+  --dir       : right;
+  --mask-1    : url('data:image/svg+xml,<svg width="8" height="24" version="1.1" viewBox="0 0 8 24" xmlns="http://www.w3.org/2000/svg"> <path d="m6 22h-4v-20h4z" stroke-width="1.0178"/></svg>');
+  --mask-2    : url('data:image/svg+xml,<svg width="8" height="24" version="1.1" viewBox="0 0 8 24" xmlns="http://www.w3.org/2000/svg"> <path d="m6 14h-4v-4h4z" stroke-width=".45517"/></svg>');
+  --scales    : 24;
   --scale-size: 1rem;
-  --value   : 1;
-  --w       : calc(var(--scales) * var(--scale-size));
-  --x       : calc(100% * (var(--value) / var(--scales)));
+  --value     : 1;
+  --w         : calc(var(--scales) * var(--scale-size));
+  --x         : calc(100% * (var(--value) / var(--scales)));
 
   height            : 2rem;
   inline-size       : var(--w);
@@ -378,9 +378,9 @@ input[type=range] {
 }
 
 [type=range]::-webkit-slider-thumb {
-  height            : var(--scale-size);
-  opacity           : 0;
-  width             : var(--scale-size);
+  height : var(--scale-size);
+  opacity: 0;
+  width  : var(--scale-size);
 
   background-color: var(--text-primary);
   box-shadow      : calc(0rem - var(--w)) 0 0 var(--w) var(--text-primary);
@@ -390,7 +390,7 @@ input[type=range] {
 
 [type=range]::-webkit-slider-runnable-track {
   background: var(--text-shadow);
-  height      : 1.6rem;
+  height    : 1.6rem;
 }
 
 [type=range],
@@ -468,21 +468,24 @@ input[type=reset]:not(:disabled):active {
 input:disabled,
 button:disabled,
 .button-disabled {
-  padding           : 0.5rem;
-  font-size         : 1em;
-  border            : none;
-  outline           : none;
-  -webkit-appearance: none;
-  -moz-appearance   : none;
-  appearance        : none;
-  border-radius     : 0;
-  background-color  : var(--text-secondary);
-  color             : inherit;
-  font-family       : inherit;
-  letter-spacing    : inherit;
-  font-weight       : inherit;
-  color             : var(--text-shadow);
-  cursor            : not-allowed;
+  padding              : 0.5rem;
+  font-size            : 1em;
+  border               : none;
+  outline              : none;
+  -webkit-appearance   : none;
+  -moz-appearance      : none;
+  appearance           : none;
+  border-radius        : 0;
+  /* background-color  : var(--text-secondary); */
+  color                : inherit;
+  font-family          : inherit;
+  letter-spacing       : inherit;
+  font-weight          : inherit;
+  /* color             : var(--text-shadow); */
+  cursor               : not-allowed;
+  pointer-events       : none;
+
+  opacity: 0.5;
 }
 
 button:not(:disabled),

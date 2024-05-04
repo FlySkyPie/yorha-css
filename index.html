@@ -90,6 +90,16 @@
           />
         </p>
         <p>
+          <label for="text">Disabled</label>
+          <input
+            disabled
+            class="full"
+            id="text"
+            type="text"
+            placeholder="YoRHa No2 Type B"
+          />
+        </p>
+        <p>
           <label for="select">Weapons</label>
           <select class="full" id="select">
             <option>Weapon Set 1</option>
@@ -105,7 +115,12 @@
             placeholder="She is a..."
           ></textarea>
         </p>
-        <button class="full" type="submit">Submit</button>
+        <p>
+          <button class="full" type="submit">Submit</button>
+        </p>
+        <p>
+          <button class="full" type="submit" disabled>Submit</button>
+        </p>
       </fieldset>
     </form>
     <fieldset>
@@ -163,8 +178,6 @@
           />
           <span class="pure-form-message">This is a required field.</span>
         </p>
-        <p></p>
-
         <p>
           <label for="stacked-password">Password</label>
           <input
@@ -213,6 +226,10 @@
         <input type="checkbox" />
         <span>Four</span>
       </label>
+      <label class="button-disabled">
+        <input type="checkbox" disabled />
+        <span>Disabled</span>
+      </label>
     </fieldset>
 
     <fieldset>
@@ -232,6 +249,10 @@
       <label>
         <input type="radio" name="question-1" value="Four" />
         <span>Four</span>
+      </label>
+      <label class="button-disabled">
+        <input type="radio" name="question-1" value="Disabled" disabled />
+        <span>Disabled</span>
       </label>
     </fieldset>
 
@@ -270,6 +291,8 @@
     <fieldset>
       <legend>Range</legend>
       <input max="24" step="1" type="range" value="3" />
+
+      <input max="24" step="1" type="range" value="3" disabled />
     </fieldset>
 
     <h2>Blockquotes</h2>
